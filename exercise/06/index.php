@@ -4,9 +4,9 @@
 
 class Car 
 {
-    public $name;
-    public $number;
-    public $color;
+    private $name;
+    private $number;
+    private $color;
 
     public function __construct($name, $number, $color)
     {
@@ -32,7 +32,7 @@ class Car
 
     public function information()
     {
-        return '車の車種: ' . $this->getName() . '、' . '車台番号: ' . $this->getNumber() . '、' . 'カラー: ' . $this->getColor() . 'です。';
+        return '車の車種: ' . $this->name . '、' . '車台番号: ' . $this->number . '、' . 'カラー: ' . $this->color . 'です。';
     }
 
     public function setName($newName)
@@ -50,9 +50,6 @@ class Car
         $this->color = $newColor;
     }
 }
-
-
-
 
 // 以下を実行した時にエラーがでないようにして下さい。
 // Carクラスのインスタンスを生成
